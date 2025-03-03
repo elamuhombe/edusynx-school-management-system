@@ -1,0 +1,1 @@
+//src/routes/student.route.ts

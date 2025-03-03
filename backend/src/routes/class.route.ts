@@ -1,0 +1,1 @@
+//src/routes/class.route.ts

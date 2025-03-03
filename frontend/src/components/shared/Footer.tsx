@@ -1,0 +1,1 @@
+//src/components/shared/Footer.tsx
