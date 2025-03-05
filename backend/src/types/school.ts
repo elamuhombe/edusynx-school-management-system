@@ -35,14 +35,14 @@ export interface ITuitionFee {
 }
 
 export interface ISubject{
-  subject_name: string;
+  subjectName: string;
   department: string;
   teacher: Types.ObjectId | IUser;
 }
 
 export interface IExam {
-    exam_name: string;
-    exam_date: string;
+    examName: string;
+    examDate: string;
     term: string;
   }
   export  interface IClass {
