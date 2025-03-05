@@ -8,7 +8,7 @@ import { Types } from "mongoose";
 
 const PaymentModeEnum = z.enum(["CASH", "BANK_TRANSFER", "M_PESA", "CHEQUE"]);
 
-export const PaymentSchema = z.object({
+const PaymentValidator = z.object({
   school: z.union([z.instanceof(Types.ObjectId), SchoolValidator]),
   invoiceNumber: z.optional(z.union([z.string(), z.custom<IInvoice>()])),
   feeName: z.string().min(1, "Fee name is required"),
@@ -43,4 +43,7 @@ export const PaymentSchema = z.object({
   tuitionFee: z.optional(z.custom<ITuitionFee>()),
   transport: z.optional(z.custom<ITransport>()),
 });
+
+export type IPayment = z.infer<typeof PaymentValidator>;
+export{PaymentValidator}
 
