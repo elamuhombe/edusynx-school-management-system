@@ -3,11 +3,15 @@ import { config } from "dotenv";
 import express, { Request, Response } from "express";
 import SwaggerUi from "swagger-ui-express";
 import swaggerJSDoc from "swagger-jsdoc";
+import cors from "cors"
 
 config();
 
 const port = process.env.PORT ? process.env.PORT : 3000;
 const app = express();
+
+app.use(express.json());
+app.use(cors());
 
 // Define Swagger options
 const swaggerOptions = {
