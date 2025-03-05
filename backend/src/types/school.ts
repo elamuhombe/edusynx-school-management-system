@@ -2,6 +2,7 @@
 
 import { Types } from "mongoose";
 import { Role } from "./enums";
+import { IUser } from "./user";
 
 export interface ISchool {
   _id?: string;
@@ -30,6 +31,12 @@ export interface ITuitionFee {
   feeName: string;
   tuitionFeeAmount: number;
   grade: string;
+}
+
+export interface ISubject{
+  subject_name: string;
+  department: string;
+  teacher: Types.ObjectId | IUser;
 }
 
 export interface IExam {
