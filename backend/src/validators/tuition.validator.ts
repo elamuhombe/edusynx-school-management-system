@@ -6,7 +6,7 @@ import { Types } from "mongoose";
 const TuitionFeeValidator = z.object({
    school: z.union([z.instanceof(Types.ObjectId), SchoolValidator]),
     feeName: z.string(),
-    tuitionFeeAmount: z.number(),
+    tuitionFeeAmount: z.number().positive("Tuition Fee amount must be a positive number"),
     grade: z.string(),
   });
   
