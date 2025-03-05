@@ -11,4 +11,4 @@ const classSchema = new mongoose.Schema<IClass>({
 
 const Class: Model<IClass>=mongoose.model("Class", classSchema)
 
-export default {Class}
+export default Class
