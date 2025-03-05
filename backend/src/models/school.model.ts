@@ -1,6 +1,7 @@
 // src/models/school.ts
 import mongoose, { Model } from "mongoose";
-import { ISchool, Role} from "../types"; // Make sure ISchool is defined in your types file
+import { ISchool}  from "../types"; // Make sure ISchool is defined in your types file
+import { Role } from "../types/enums";
 
 // Mongoose schema definition
 const schoolSchema = new mongoose.Schema<ISchool>({
