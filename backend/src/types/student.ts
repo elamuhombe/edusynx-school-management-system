@@ -26,4 +26,13 @@ export interface IStudentAttendance{
   isPresent: boolean;
 }
 
+export interface IStudentMarks{
+  studentId: Types.ObjectId;
+  examId: Types.ObjectId;
+  subjectMarks: {
+    subjectName: string;
+    marks: number;
+  }[];
+}
+
 
