@@ -10,8 +10,8 @@ export interface IUser {
   email: string;
   phoneNumber1: string;
   phoneNumber2: string;
-  email1: string;
-  email2: string;
+  primaryEmail: string;
+  secondaryEmail: string;
   gender: Gender;
   role: Role;
   password?: string;
