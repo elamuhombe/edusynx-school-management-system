@@ -3,6 +3,7 @@
 import { Types } from "mongoose";
 import { Role } from "./enums";
 import { IUser } from "./user";
+import { IStudentAttendance } from "./student";
 
 export interface ISchool {
   _id?: string;
@@ -48,6 +49,13 @@ export interface IExam {
     school: Types.ObjectId | ISchool;
     className: string;
     year: number;
+  }
+
+  export interface IAttendance{
+    class: IClass;
+    date: Date;
+    studentAttendances: IStudentAttendance[]
+  
   }
 
   export interface ITransport{
