@@ -55,7 +55,6 @@ export interface IExam {
     class: IClass;
     date: Date;
     studentAttendances: IStudentAttendance[]
-  
   }
 
   export interface ITransport{
