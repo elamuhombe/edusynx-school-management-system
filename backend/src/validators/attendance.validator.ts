@@ -5,7 +5,7 @@ import { StudentAttendanceValidator } from "./studentAttendance.validator";
 
 const AttendanceValidator = z.object({
   class: ClassValidator, // Zod validation for IClass
-  date: z.date(), // Zod validation for Date
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Invalid date format (YYYY-MM-DD expected)"),
   studentAttendances: z.array(StudentAttendanceValidator), // Zod validation for array of IStudentAttendance
 });
 
