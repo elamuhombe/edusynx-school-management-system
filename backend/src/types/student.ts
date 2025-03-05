@@ -20,3 +20,10 @@ export interface IStudent {
   activity?: Types.ObjectId | IActivity;
   transport?: Types.ObjectId | ITransport
 }
+
+export interface IStudentAttendance{
+  student: string | IStudent;
+  isPresent: boolean;
+}
+
+
