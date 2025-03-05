@@ -1,6 +1,6 @@
 // src/models/school.ts
 import mongoose, { Model } from "mongoose";
-import { ISchool } from "../types"; // Make sure ISchool is defined in your types file
+import { ISchool, Role} from "../types"; // Make sure ISchool is defined in your types file
 
 // Mongoose schema definition
 const schoolSchema = new mongoose.Schema<ISchool>({
@@ -11,7 +11,7 @@ const schoolSchema = new mongoose.Schema<ISchool>({
     email: { type: String, required: true, lowercase: true },
     password: { type: String, required: true },
     school: { type: String, required: true },
-    role: { type: String, required: true, default: "admin"},
+    role: { type: String, enum: Object.values(Role), required: true, default: Role.ADMIN},
     status: { type: String, required: true, enum: ["active", "inactive"], default: "inactive" }, // Default value set
     paymentId: { type: String, required: true },
     username: { type: String, required: true, lowercase: true },
