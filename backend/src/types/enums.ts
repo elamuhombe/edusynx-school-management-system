@@ -9,6 +9,7 @@ export enum Gender {
   export enum Role {
     ADMIN = "admin",
     HEADTEACHER = "headTeacher",
+    TEACHER = "teacher",
     SCHOOLADMIN = "schoolAdmin",
     ACCOUNTANT = "accountant",
     GUARDIAN = "guardian",
