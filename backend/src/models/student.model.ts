@@ -24,4 +24,4 @@ const studentSchema = new mongoose.Schema<IStudent>({
 
 const Student: Model<IStudent> = new mongoose.Model("Student", studentSchema)
 
-export {Student}
+export default Student
